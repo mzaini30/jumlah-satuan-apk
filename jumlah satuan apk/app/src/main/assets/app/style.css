@@ -1,0 +1,7 @@
+body {
+	padding-top: 60px;
+}
+
+.navbar-nav li hr {
+	margin: 0;
+}

@@ -1,0 +1,21 @@
+$('#angka').keyup(function(){
+	angka = $(this).val()
+	pecah = angka.split('')
+	jumlah = 0
+	for (n in pecah){
+		jumlah += Number(pecah[n])
+	}
+	$('.hasil').html(jumlah)
+	if ($('.hasil').html() == ''){
+		$('.hasil').html('0')
+	}
+})
+
+$('.hapus').click(function(){
+	$('#angka').val('').focus()
+	$('.hasil').html('0')
+})
+
+$('.navbar-collapse a').click(function(){
+	$('.navbar-toggle').click()
+})
