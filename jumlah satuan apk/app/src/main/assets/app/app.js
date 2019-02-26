@@ -1,4 +1,4 @@
-$('#angka').keyup(function(){
+$('.angka').keyup(function(){
 	angka = $(this).val()
 	pecah = angka.split('')
 	jumlah = 0
@@ -12,10 +12,16 @@ $('#angka').keyup(function(){
 })
 
 $('.hapus').click(function(){
-	$('#angka').val('').focus()
+	$('.angka').val('').focus()
 	$('.hasil').html('0')
 })
 
 $('.navbar-collapse a').click(function(){
 	$('.navbar-toggle').click()
+})
+
+new Cleave('.angka', {
+    // numeral: true,
+    delimiter: '-',
+    blocks: [5] // masih error di bagian ini
 })
